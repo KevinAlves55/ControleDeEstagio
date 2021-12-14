@@ -14,7 +14,7 @@ body{
 }
 
 #container-login{
-    width: 70%;
+    width: 65%;
     height: 62%;
     background-color: aqua;
     border-radius: 10px;
@@ -43,7 +43,7 @@ form{
     width: 100%;
     height: 78%;
     /* background-color: aquamarine;  */
-    margin-top: 15px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,6 +115,10 @@ form{
 }
 #icon-google a{
     text-decoration: none;
+    
+}
+#icon-google img{
+    transition: 0.5s;
 }
 #icon-google img:hover{
     cursor: pointer;
@@ -160,6 +164,7 @@ a:hover{
     height: 60px;
     text-shadow: 2px 2px 0px black;
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
 }
 
 #botao input:hover{
