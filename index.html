@@ -4,21 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/login.css" rel="stylesheet" type="text/css">
     <title>Tela de login</title>
 </head>
     <body>
-        <div id="containerLogin">
+        <div id="container-login">
             <!-- LADO ESQUERDO DA TELA DE LOGIN(onde o usuario irá se logar) -->
             <div id="login">
                 <h1>
                     Login
                 </h1>
                 <form action="autenticar.php" name="frmCadastro" method="post">
-                    <div class="camposLogin">
-                        <div>
+                    <div class="campos-login">
+                        <div id="icon-usuario">
                             
                         </div>
+                        <div class="campo-dados">
+                            <input type="text" placeholder="Digite seu Usuário ou E-mail">
+                        </div>
+                    </div>
+                    <div class="campos-login">
+                        <div id="icon-lock">
+                            
+                        </div>
+                        <div class="campo-dados">
+                            <input type="password" placeholder="Digite sua senha">
+                        </div>
+                    </div>
+                    <div id="links-paginas">
+                        <div id="icon-google">
+                            <a href="">
+                                <img src="assets/img/google.png">
+                            </a>
+                        </div>
+                        <div id="links">
+                            <a href="">
+                                Esqueceu a senha
+                            </a>
+                            <div id="pergunta">
+                                Ainda não tem uma conta?
+                            </div>
+                            <a href="">
+                                Crie uma agora!!
+                            </a>
+                        </div>
+                    </div>
+                    <div id="botao">
+                        <input type="submit" value="Enviar">
                     </div>
                 </form>
             </div>
@@ -28,7 +60,7 @@
                 <h5>
                     Serviço Nacional de Aprendizagem  Industrial
                 </h5>
-                <div id="imgIlustracao"></div>
+                <div id="img-ilustracao"></div>
             </div>
         </div>
     </body>
