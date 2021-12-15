@@ -1,0 +1,113 @@
+header {
+    @include tamanho(180px, 100%);
+    @include DisplayFlex(row, center);
+    background-color: $corPrincipal;
+
+    #logo {
+        @include tamanho(180px, 28.80vw);
+        @include DisplayFlex(column, center, center);
+
+        img {
+            @include tamanho(70px, 283px);
+        }
+
+        h2 {
+            color: $neutra;
+            font-weight: map-get($tamanho, subTitulo);
+            text-transform: capitalize;
+        }
+    }
+
+    #menu {
+        @include tamanho(180px, 33vw);
+        @include DisplayFlex(row, space-between);
+
+        nav, #menu-nav-conteudo {
+            @include tamanho(inherit, 370px);
+
+            #menu-nav-conteudo {
+                @include DisplayFlex(row, space-between, center);
+
+                li {
+                    position: relative;
+                    @include DisplayFlex(row, flex-start, center);
+                    text-transform: capitalize;
+
+                    img {
+                        @include tamanho(27px, 29px);
+                        margin-right: 5px;
+                        margin-left: 5px;
+                    }
+
+                    a {
+                        color: $neutra;
+                        font-size: map-get($tamanho, grau1);
+                    }
+
+                    #menu-drop {
+                        position: absolute;
+                        top: 45px;
+                        left: -288px;
+                        background-color: $corPrincipal;
+                        @include tamanho(300px, 480px);
+                        @include DisplayFlex(column, center, center);
+                        gap: 40px;
+
+                        li {
+                            border-bottom: 3px solid $escura;
+
+                            a {
+                                font-size: map-get($tamanho, grau1);
+                                display: block;
+                                height: 35px;
+
+
+                                &:hover {
+                                    background-color: $tonalidadeEscura;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #perfil {
+            @include tamanho(180px, 176px);
+            @include DisplayFlex(column, center, center);
+
+            #perfil-foto {
+                @include tamanho(100px, 100px);
+                @include DisplayFlex(row, center, center);
+
+                img {
+                    @include tamanho(inherit, inherit);
+                    border-radius: 50%;
+                }
+            }
+
+            #perfil-sair {
+                @include tamanho(50px, 176px);
+                @include DisplayFlex(row, center, center);
+
+                img {
+                    @include tamanho(35px, 35px);
+                    margin-right: 8px;
+                }
+
+                span {
+                    color: $neutra;
+                    font-weight: map-get($densidade, Media);
+                    font-size: map-get($tamanho, grau3);
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+}

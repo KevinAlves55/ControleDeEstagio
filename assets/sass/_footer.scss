@@ -1,0 +1,29 @@
+footer {
+    @include tamanho(290px, 100%);
+    @include DisplayFlex(column, flex-start, center);
+    background-color: $corPrincipal;
+    margin-top: 25px;
+
+    .itens-footer {
+        @include tamanho(200px, inherit);
+        @include DisplayFlex(column, center);
+        gap: 10px;
+
+        span {
+            font-size: map-get($tamanho, grau3);
+            color: $neutra;
+            margin-left: 28px;
+        }
+    }
+
+    #direitos-footer {
+        @include tamanho(90px, inherit);
+        @include DisplayFlex(row, center, center);
+        background-color: #EC6868;
+
+        span {
+            font-size: map-get($tamanho, grau3);
+            color: $neutra;
+        }
+    }
+}

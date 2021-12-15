@@ -1,0 +1,34 @@
+// Paletas de cores
+$corPrincipal: #FF7A7A;
+$corSegundaria: #E75C5C;
+$tonalidadeEscura: #C8494E;
+$neutra: #fff;
+$escura: #000;
+
+// Tamanho da letra
+$tamanho: (
+
+    "Titulos": 2.8rem,
+    "subTitulo": 1.9rem,
+    "grau1": 1.8rem,
+    "grau2": 1.045rem,
+    "grau3": 1.4rem,
+    "grau4": 1.1rem,
+    "grau5": 0.9rem,
+    "grau6": 2.3rem
+
+);
+
+// Densidade da letra
+$densidade: (
+    
+    "ExtraLeve": 200,
+    "Leve": 300,
+    "Regular": 400,
+    "Media": 500,
+    "Bold": 600
+
+);
+
+// Sombra
+$sombreamento: 10px 10px 3px #FFACA9;
