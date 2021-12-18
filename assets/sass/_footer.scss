@@ -2,12 +2,13 @@ footer {
     @include tamanho(290px, 100%);
     @include DisplayFlex(column, flex-start, center);
     background-color: $corPrincipal;
-    margin-top: 25px;
+    margin-top: 45px;
 
     .itens-footer {
         @include tamanho(200px, inherit);
         @include DisplayFlex(column, center);
         gap: 10px;
+        margin-right: 20px;
 
         span {
             font-size: map-get($tamanho, grau3);
@@ -24,6 +25,7 @@ footer {
         span {
             font-size: map-get($tamanho, grau3);
             color: $neutra;
+            text-align: center;
         }
     }
 }

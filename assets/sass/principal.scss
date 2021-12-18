@@ -16,7 +16,8 @@ body {
 }
 
 #banner-titulo {
-    @include tamanho(588px, 100%);
+    min-height: 588px;
+    width: 100%;
     @include DisplayFlex(column, flex-start, center);
 
     h1 {
@@ -35,7 +36,8 @@ body {
 }
 
 #barra-sub-titulo {
-    @include tamanho(150px, 100%);
+    min-height: 150px;
+    width: 100%;
     @include DisplayFlex(row, center, center);
     background-color: $tonalidadeEscura;
 
@@ -57,18 +59,20 @@ main {
 
         h2 {
             color: $tonalidadeEscura;
-            margin-top: 30px;
+            margin-top: 45px;
             font-size: map-get($tamanho, grau6);
             font-weight: map-get($densidade, Regular);
             border-bottom: 3px solid $tonalidadeEscura;
+            margin-left: 15px;
         } 
     
         #conteudo-card {
             min-height: 400px;
-            width: 1550px;
-            @include DisplayFlex(row, space-between, center);
-            margin-left: auto;
-            margin-right: auto;
+            width: inherit;
+            @include DisplayFlex(row, center, center);
+            margin-top: 45px;
+            flex-wrap: wrap;
+            gap: 100px;
 
             .card {
                 @include tamanho(280px, 335px);
@@ -77,6 +81,13 @@ main {
                 box-shadow: $sombreamento;
                 border-radius: 8px;
                 gap: 8px;
+                cursor: pointer;
+                transition: .5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: .5s;
+                }
 
                 h3 {
                     color: $neutra;
@@ -91,4 +102,195 @@ main {
             }
         }
     }
+}
+
+/* Desktop */
+@media (max-width: 1149px) {
+    
+    header {
+
+        #logo {
+
+            img {
+                @include tamanho(60px, 200px)
+            }
+    
+            h2 {
+                font-size: map-get($tamanho, grau7);
+                text-align: center;
+            }
+    
+        }
+
+    }
+
+}
+
+/* tablete */
+@media (max-width: 887px) {
+    
+    header {
+
+        #menu {
+            @include tamanho(180px, 400px);
+
+            nav, #menu-nav-conteudo {
+                width: 235px;
+            }
+
+            #perfil {
+                width: 120px;
+
+                #perfil-foto {
+                    @include tamanho(90px, 90px);
+                }
+
+                #perfil-sair {
+
+                    img {
+                        @include tamanho(30px, 30px);
+                    }
+
+                    span {
+                        font-size: map-get($tamanho, grau7);
+                    }
+                
+                }
+            }
+
+        }
+
+    }
+
+    header #menu nav #menu-nav-conteudo li img, header #menu #menu-nav-conteudo #menu-nav-conteudo li img {
+        @include tamanho(19px, 21px);
+    }
+
+    header #menu nav #menu-nav-conteudo li a, header #menu #menu-nav-conteudo #menu-nav-conteudo li a {
+        font-size: map-get($tamanho, grau3);
+    }
+
+    #barra-sub-titulo  {
+
+        h2 {
+            font-size: map-get($tamanho, grau3);
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+    }
+
+}
+
+@media (max-width: 698px) {
+
+    header {
+
+        #logo {
+            width: 230px;
+
+            img {
+                @include tamanho(45px, 160px)
+            }
+    
+            h2 {
+                font-size: map-get($tamanho, grau8);
+            }
+    
+        }
+
+        #menu {
+            @include tamanho(180px, 255px);
+
+            nav, #menu-nav-conteudo {
+                width: 180px;
+            }
+
+            #perfil {
+                width: 75px;
+
+                #perfil-foto {
+                    @include tamanho(60px, 60px);
+                }
+
+                #perfil-sair {
+                    width: 75px;
+
+                    img {
+                        @include tamanho(20px, 20px);
+                    }
+
+                    span {
+                        font-size: map-get($tamanho, grau4);
+                    }
+                
+                }
+            }
+
+        }
+
+    }
+
+    header #menu nav #menu-nav-conteudo li img, header #menu #menu-nav-conteudo #menu-nav-conteudo li img {
+        @include tamanho(15px, 17px);
+    }
+
+    header #menu nav #menu-nav-conteudo li a, header #menu #menu-nav-conteudo #menu-nav-conteudo li a {
+        font-size: map-get($tamanho, grau4);
+    }
+
+    header #menu nav #menu-nav-conteudo li #menu-drop, header #menu #menu-nav-conteudo #menu-nav-conteudo li #menu-drop {
+        @include tamanho(300px, 450px)
+    }
+
+    #banner-titulo {
+
+        h1 {
+            font-size: map-get($tamanho, grau1);
+        }
+
+    }
+
+    #barra-sub-titulo {
+
+        h2 {
+            font-size: map-get($tamanho, grau4);
+        }
+
+    }
+
+    main {
+
+        .itens-main {
+
+            h2 {
+                font-size: map-get($tamanho, grau1);
+            }
+
+        }
+
+    }
+
+    footer {
+
+        .itens-footer {
+
+            span {
+                font-size: map-get($tamanho, grau5);
+            }
+
+        }
+
+        #direitos-footer {
+
+            span {
+                font-size: map-get($tamanho, grau5);
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+        }
+
+    }
+    
 }

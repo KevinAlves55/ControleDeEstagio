@@ -4,7 +4,8 @@ header {
     background-color: $corPrincipal;
 
     #logo {
-        @include tamanho(180px, 28.80vw);
+        width: 600px;
+        height: 180px;
         @include DisplayFlex(column, center, center);
 
         img {
@@ -19,7 +20,7 @@ header {
     }
 
     #menu {
-        @include tamanho(180px, 33vw);
+        @include tamanho(180px, 546px);
         @include DisplayFlex(row, space-between);
 
         nav, #menu-nav-conteudo {
@@ -87,7 +88,8 @@ header {
             }
 
             #perfil-sair {
-                @include tamanho(50px, 176px);
+                height: 50px;
+                width: 100px;
                 @include DisplayFlex(row, center, center);
 
                 img {
